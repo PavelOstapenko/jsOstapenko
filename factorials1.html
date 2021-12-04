@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Остапенко</title>
+</head>
+<body>
+	<h1>Ответ:</h1>
+	<script type="text/javascript">
+		var n = +prompt ("Введите переменную n");
+		var x = +prompt ("Введите переменную x");
+		var p = 0;
+				function factorial(n) {
+  				return n ? n * factorial(n - 1) : 1;
+				}
+				alert (factorial(n))
+		for (var i=1; i<=n; i++){
+			p = p + ((((-1)**i)*(x**(2*i)))/factorial(i));
+		}
+		p=1+p;
+		document.write(p)
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Остапенко</title>
+		<script type="text/javascript">
+		function func(){
+		var n =  (document.forms["frm"].elements["varn"].value);
+		var x =  (document.forms["frm"].elements["varx"].value);
+		var p = 0;
+				function factorial(n) {
+  				return n ? n * factorial(n - 1) : 1;
+				}
+		for (var i=1; i<=n; i++){
+			p = p + ((((-1)**i)*(x**(2*i)))/factorial(i));
+		}
+		p=1+p;
+		document.writeln(p)
+		}
+	</script>
+</head>
+<body>
+	<form id="frm">
+        <p>Введите число n (больше нуля):</p>
+        <input type="text" name="varn" id="x">
+        <p>Введите число x:</p>
+        <input type="text" name="varx" id="n">
+        <input type="submit" value="OK" onclick="func()">
+    </form>
+</body>
+</html>
