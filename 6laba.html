@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+        var x = Number(prompt("Первуя координата:"));
+        var y = Number(prompt("Вторуя координата:"));
+        var z = Number(prompt("Третья координата:"));
+        function Vector(){
+				this.Dlina=function(){
+                var uravnenie = ((x**2)+(y**2)+(z**2))**(1/2);
+                document.write("Длина вектора = "+uravnenie);
+            }
+        }
+        var vector = new Vector();
+        vector.Dlina();
+    </script>
+</body>
+</html>
