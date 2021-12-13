@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Остапенко</title>
+	<script type="text/javascript">
+        //функция для создания массива пользователем
+        function newMas(){
+            var n = Number(prompt("Введите количество элементов:"));
+            var numArray = [];
+            for(var i=0; i<n; i++){
+                numArray[i]=Number(prompt("Введите число:"));
+            }
+            return numArray;
+        }
+        //Функция для нахождения максимального элемента массива
+        function MaxElement(arr){
+            var max=0;
+            for(var i=1; i<arr.length; i++){
+                if(arr[i]>arr[max]){
+                    max=i;
+                }
+            }
+            return max;
+        }
+        var myArray = newMas();
+        //Задание 2. Сумма элементов массива, расположенных после максимального по модулю элемента
+        var maxEl = MaxElement(myArray);
+        var summa = 0;
+        if (maxEl==myArray.length) {
+            summa=0;
+        }
+        else{
+            for(var i=maxEl+1; i<myArray.length; i++){
+                summa+=myArray[i];
+            }
+        }
+        //Задание 1. Количество элементов массива в диапазоне
+        var a = Number(prompt("Введите начало интервала: "));
+        var b = Number(prompt("Введите конец интервала: "));
+        var kolichestvoEl=0;
+        for(var i=0; i<myArray.length; i++){
+            if (myArray[i]>=a && myArray[i]<=b) {
+                kolichestvoEl+=1;
+            }
+        }
+        alert (kolichestvoEl);
+        //Сортировка по убыванию
+		myArray.sort((a, b) => Math.abs(b) - Math.abs(a))
+		alert(myArray)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
