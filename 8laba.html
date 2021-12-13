@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-color:" class="BodyChange">
+<h1>Лабараторная 8</h1>
+<h2><a href="" class="ssilka">Ссылка</a></h2>
+    <script type="text/javascript">
+        var a = prompt("Цвет фона:");
+        var b = prompt("Цвет текста:");
+        var c = prompt("Ссылка");
+        var bodyColor = document.querySelector("body.BodyChange");
+        bodyColor.setAttribute("style", `background-color:${a}`);
+        var root = document.documentElement;
+        root.style.color = b;
+        var ancor = document.querySelector("a.ssilka");
+        ancor.setAttribute("href", `${c}`);
+    </script>
+
+</body>
+</html>
