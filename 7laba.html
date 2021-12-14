@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Остапенко</title>
+</head>
+<body>
+<script type="text/javascript">
+  var x = prompt("Введите х");
+  var y = 0;
+  function browser(){
+  if (navigator.userAgent.indexOf('Firefox')!== -1) {
+    y=Number(x)+5;
+   alert (y);
+  } else if (navigator.userAgent.indexOf('Edg')!== -1) {
+    y = Math.sin(x)
+    alert (y);
+  } else if (navigator.userAgent.indexOf('OPR')!== -1) {
+    y = Math.pow(x, 2)
+    alert (y);
+  }  else if (navigator.userAgent.indexOf('Chrome')!== -1) {
+    y = Math.pow(x, 3) + 9;
+   alert (y);;
+  }
+}
+browser()
+    </script>
+</body>
+</html>
